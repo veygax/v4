@@ -5,10 +5,7 @@
       "use": "@vercel/node"
   }],
   "routes": [{
-      "src": "/(.*)",
-      "dest": "index.js"
-  }],
-  "rewrites": [
-    { "source": "/.well-known/discord", "destination": "/.well-known/discord.txt" }
-  ]
+      "src": "/.well-known/discord",
+      "dest": "/.well-known/discord.txt"
+  }]
 }
