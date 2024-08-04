@@ -11,7 +11,7 @@ const publicPath = fileURLToPath(new URL("./public/", import.meta.url));
 const bare = createBareServer("/bare/");
 const app = express();
 
-app.use('/.well-known/discord', express.static('./public/.well-known/discord.txt')
+app.use('/.well-known/discord', express.static(publicPath + '/.well-known/discord.txt')
 app.use(express.static(publicPath));
 app.use("/uv/", express.static(uvPath));
 
