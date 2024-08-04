@@ -15,7 +15,11 @@ app.use(express.static(publicPath));
 app.use("/uv/", express.static(uvPath));
 app.get('/.well-known/discord', (req, res) => {
   const filePath = path.join(__dirname, './public/.well-known/discord.txt');
-  res.sendFile(filePath);
+  res.sendFile(filePath, (err) => {
+    if (err) {
+      console.error(`Error sending file: ${err}`);
+      res.status(500).send('Internal Server Error');
+    }
 });
 
 // Error for everything else
