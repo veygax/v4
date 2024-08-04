@@ -6,6 +6,6 @@
   }],
   "routes": [{
       "src": "/.well-known/discord",
-      "dest": "/public/.well-known/discord.txt"
+      "dest": "./public/.well-known/discord.txt"
   }]
 }
