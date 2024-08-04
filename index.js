@@ -20,6 +20,10 @@ app.use((req, res) => {
   res.sendFile(join(publicPath, "404.html"));
 });
 
+app.get('/.well-known/discord', (req, res) => {
+  const filePath = path.join(__dirname, './public/.well-known/discord.txt');
+  res.sendFile(filePath);
+});
 const server = createServer();
 
 server.on("request", (req, res) => {
