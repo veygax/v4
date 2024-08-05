@@ -4,8 +4,8 @@
       "src": "index.js",
       "use": "@vercel/node"
   }],
-  "routes": [{
-      "src": "/.well-known/discord",
-      "dest": "discord.txt"
+  "rewrites": [{
+      "source": "/.well-known/discord",
+      "destination": "discord.txt"
   }]
 }
